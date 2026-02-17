@@ -34,7 +34,6 @@ export class AuthService {
   async refresh(refreshToken: string): Promise<AuthTokens> {
     const tokenHash = await this.authRepository.hashToken(refreshToken);
     const storedToken = await this.authRepository.findRefreshToken(tokenHash);
-
     if (!storedToken) {
       throw new UnauthorizedError('Invalid refresh token');
     }

@@ -50,7 +50,7 @@ const rawConfig = {
   },
   rateLimit: {
     windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS || '60000', 10),
-    maxRequests: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || '5', 10),
+    maxRequests: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || '50', 10),
   },
   bcrypt: {
     saltRounds: parseInt(process.env.BCRYPT_SALT_ROUNDS || '12', 10),
